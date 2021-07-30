@@ -1,0 +1,17 @@
+.footer {
+  padding: 100px 0px;
+  color: white;
+  background-color: rgb(9, 21, 45);
+}
+.list-group .title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.list-group a {
+  font-size: 16px;
+  color: #fff !important;
+  font-weight: 600 !important;
+}
+.footer__link:hover {
+  color: rgb(233, 157, 1) !important;
+}

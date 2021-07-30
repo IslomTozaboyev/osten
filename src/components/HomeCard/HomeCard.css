@@ -1,0 +1,24 @@
+.homeCard{
+    height: 100% !important;
+    background-color: white;
+    box-shadow: rgb(17 32 69) 0px 6px 36px -20px;
+    color: rgb(17, 32, 69);
+    min-height: 220px;
+    transition: all 0.2s ease-in-out 0s;
+    cursor: pointer;
+}
+.homeCard .subtitle{
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #112045;
+    font-size: 21px !important;
+}
+
+.homeCard .subtitle2{
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    font-size: 18px !important;
+    font-weight: 400;
+    color: #112045;
+}

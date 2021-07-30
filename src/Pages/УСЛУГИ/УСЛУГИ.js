@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 import "./УСЛУГИ.css";
 
 const УСЛУГИ = () => {
-    return (
-        <div>
-             <h1>УСЛУГИ</h1>
-        </div>
-    )
-}
+  return (
+    <div className="my-5">
+      <h1 className="pt-5">УСЛУГИ</h1>
+    </div>
+  );
+};
 
 export default УСЛУГИ;
