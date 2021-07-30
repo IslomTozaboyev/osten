@@ -1,0 +1,13 @@
+.universialTheme h1 {
+  font-size: 60px;
+  text-shadow: rgb(0 0 0) 5px 5px 5px;
+  font-weight: 900;
+}
+.universialTheme p {
+  font-size: 22px;
+  margin: 10px 0px 0px;
+  font-weight: 700;
+}
+.about__texts .subtitle {
+  font-size: 18px;
+}

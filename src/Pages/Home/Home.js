@@ -19,6 +19,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import "../../../node_modules/swiper/swiper-bundle.min.css";
 import { faAccusoft } from "@fortawesome/free-brands-svg-icons";
+import Lift from "../../components/lift";
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 const text = [
@@ -40,33 +41,6 @@ const result = [
   { icon: faPen, title: "300", subtitle: "лифтов в год" },
   { icon: faBriefcase, title: "2", subtitle: "года на рынке" },
   { icon: faCircleNotch, title: "200", subtitle: "эскалаторов в год" },
-];
-
-const swipers = [
-  {
-    img: "https://orzu-tehnopark.s3.amazonaws.com/oston/images/2020/10/16/mls2.jpg",
-    title: "OSTEN L1",
-  },
-  {
-    img: "https://orzu-tehnopark.s3.amazonaws.com/oston/images/2020/10/16/OSTEN-L2.jpg",
-    title: "OSTEN L2",
-  },
-  {
-    img: "https://orzu-tehnopark.s3.amazonaws.com/oston/images/2020/10/16/mls2.jpg",
-    title: "osten l3",
-  },
-  {
-    img: "https://orzu-tehnopark.s3.amazonaws.com/oston/images/2020/10/16/mls2.jpg",
-    title: "OSTEN L1",
-  },
-  {
-    img: "https://orzu-tehnopark.s3.amazonaws.com/oston/images/2020/10/16/OSTEN-L2.jpg",
-    title: "OSTEN L2",
-  },
-  {
-    img: "https://orzu-tehnopark.s3.amazonaws.com/oston/images/2020/10/16/mls2.jpg",
-    title: "osten l3",
-  },
 ];
 
 const poisk = [
@@ -162,8 +136,8 @@ const Home = () => {
             {text.map((value, index) => {
               return (
                 <HomeCard className="col-10 col-md-6 col-lg-3 my-5">
-                  <div className="homeCard  text-center p-5">
-                    <Fade up>
+                  <Fade up>
+                    <div className="homeCard  text-center p-5">
                       <div>
                         <FontAwesomeIcon
                           className="display-1 mb-4"
@@ -172,8 +146,8 @@ const Home = () => {
                         <p className="subtitle fs-4">{value.title}</p>
                         <p className="subtitle2 fs-4">{value.subtitle}</p>
                       </div>
-                    </Fade>
-                  </div>
+                    </div>
+                  </Fade>
                 </HomeCard>
               );
             })}
@@ -210,72 +184,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* swiper__lift__section */}
-      <div className="home__services section__padding">
-        <div className="container swiper__container p-5">
-          <div className="services__title">
-            <h1 className="title text-center mb-5">Кабины лифтов</h1>
-          </div>
-          <Swiper
-            className="d-flex text-center"
-            slidesPerView={1}
-            loop={true}
-            pagination={{ clickable: true }}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log("slide change")}
-            autoplay={{
-              delay: 1000,
-              disableOnInteraction: true,
-            }}
-            breakpoints={{
-              500: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-                slidesPerGroup: 1,
-              },
-              640: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-                slidesPerGroup: 1,
-              },
-              768: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-                slidesPerGroup: 1,
-              },
-              1024: {
-                slidesPerView: 4,
-                spaceBetween: 50,
-                slidesPerGroup: 1,
-              },
-            }}
-          >
-            {swipers.map((value, index) => {
-              return (
-                <SwiperSlide className="swiper__slide my-5">
-                  <div className="card__swiper">
-                    <div className="">
-                      <img
-                        src={value.img}
-                        alt="rasm"
-                        className="w-100 swiper__img"
-                      />
-                      <h5 className="swiper__subtitle">{value.title}</h5>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
-          <div className="text-center">
-            <button className="btn text-white my-3">
-              <a className="text-white shadow-none" href="/ПРОДУКЦИЯ">
-                ВСЯ ПРОДУКЦИЯ
-              </a>
-            </button>
-          </div>
-        </div>
-      </div>
+      <Lift />
 
       {/* icons__section */}
       <div className="home__services preim__container section__padding">

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./Footer.css";
-import { Button } from "reactstrap";
 
 class Column extends Component {
   render() {

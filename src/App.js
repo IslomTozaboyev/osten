@@ -5,8 +5,6 @@ import { Route, Switch, Link } from "react-router-dom";
 import Home from "./Pages/Home";
 import Error404 from "./Pages/Error404";
 import Header from "./containers/Header";
-import ПРОИЗВОДСТВО from "./Pages/ПРОИЗВОДСТВО";
-import Oнас from "./Pages/Oнас";
 import УСЛУГИ from "./Pages/УСЛУГИ";
 import ПРОДУКЦИЯ from "./Pages/ПРОДУКЦИЯ";
 import КОНСТРУКТОР from "./Pages/КОНСТРУКТОР";
@@ -14,11 +12,13 @@ import НОВОСТИ from "./Pages/НОВОСТИ";
 import КОНТАКТЫ from "./Pages/КОНТАКТЫ";
 import Footer from "./containers/Footer";
 import data from "./datafooter/datafooter";
+import About from "./Pages/About";
+import Proffesional from "./Pages/Proffesional";
 
 const routers = [
   { path: "/", component: <Home />, exact: true },
-  { path: "/Oнас", component: <Oнас /> },
-  { path: "/ПРОИЗВОДСТВО", component: <ПРОИЗВОДСТВО /> },
+  { path: "/Oнас", component: <About /> },
+  { path: "/ПРОИЗВОДСТВО", component: <Proffesional /> },
   { path: "/УСЛУГИ", component: <УСЛУГИ /> },
   { path: "/ПРОДУКЦИЯ", component: <ПРОДУКЦИЯ /> },
   { path: "/КОНСТРУКТОР", component: <КОНСТРУКТОР /> },
@@ -38,23 +38,23 @@ function App() {
             {value.component}
           </Route>
         ))}
+      </Switch>
 
-        {/* <Route exact path="/">
-         <Home/>
+      {/* <Route exact path="/">
+           <Home/>
         </Route>
 
         <Route  path="/about">
-         <About/>
+          <About/>
         </Route>
 
         <Route  path="/dashboard">
-         <Dashboard/>
+           <Dashboard/>
         </Route>
 
         <Route>
           <Error404/>
         </Route> */}
-      </Switch>
 
       <Footer data={data} colProps="col-6 col-lg-6" />
     </div>
