@@ -20,6 +20,7 @@ import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import "../../../node_modules/swiper/swiper-bundle.min.css";
 import { faAccusoft } from "@fortawesome/free-brands-svg-icons";
 import Lift from "../../components/lift";
+import PartSwiper from "../../components/PartSwiper/PartSwiper";
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 const text = [
@@ -91,15 +92,6 @@ const kliens = [
     title: "Abdulaziz • Algorismic Company",
     subtitle: `Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.`,
   },
-];
-
-const nashSwipers = [
-  { img: "https://osten.vercel.app/images/index/partner1.png" },
-  { img: "https://osten.vercel.app/images/index/partner3.png" },
-  { img: "https://osten.vercel.app/images/index/partner4.png" },
-  { img: "https://osten.vercel.app/images/index/partner5.png" },
-  { img: "https://osten.vercel.app/images/index/partner6.png" },
-  { img: "https://osten.vercel.app/images/index/partner7.png" },
 ];
 
 const Home = () => {
@@ -247,58 +239,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      {/* swiper__nashi__section */}
-      <div className="home__services ">
-        <div className="container swiper__container p-5">
-          <div className="services__title">
-            <h1 className="title text-center">Наши партнеры</h1>
-          </div>
-          <Swiper
-            className="d-flex text-center my-5"
-            spaceBetween={20}
-            slidesPerView={1}
-            loop={true}
-            pagination={{ clickable: true }}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log("slide change")}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: true,
-            }}
-            breakpoints={{
-              640: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-                slidesPerGroup: 1,
-              },
-              768: {
-                slidesPerView: 4,
-                spaceBetween: 40,
-                slidesPerGroup: 2,
-              },
-              1024: {
-                slidesPerView: 5,
-                spaceBetween: 50,
-                slidesPerGroup: 4,
-              },
-            }}
-          >
-            {nashSwipers.map((value, index) => {
-              return (
-                <SwiperSlide className="swiper__slide mt-2">
-                  <div className="swiper__slides  text-center">
-                    <div className="cards">
-                      <img src={value.img} alt="rasm" className="w-100" />
-                    </div>
-                  </div>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
-          <div className="text-center"></div>
-        </div>
-      </div>
+      <PartSwiper />
     </div>
   );
 };

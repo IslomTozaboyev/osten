@@ -1,3 +1,11 @@
 .list__text {
   color: black;
 }
+.list__group .subtitle {
+  font-size: 18px;
+}
+@media screen and (max-width: 600px) {
+  .pro__title {
+    font-size: 40px !important;
+  }
+}

@@ -5,11 +5,16 @@ import UniversalTheme from "../../components/UniversalTheme";
 import Tab from "react-bootstrap/Tab";
 import { Col, Nav, Row } from "react-bootstrap";
 import Connet from "../../components/Connet/Connet";
+import PartSwiper from "../../components/PartSwiper";
 import list from "../../img/list.jpg";
 import list2 from "../../img/list2.jpg";
 import list3 from "../../img/list3.jpg";
 import list4 from "../../img/list4.jpg";
 import list5 from "../../img/list5.jpg";
+import list6 from "../../img/list6.jpg";
+import list7 from "../../img/list7.jpg";
+import list8 from "../../img/list8.jpg";
+import list9 from "../../img/list9.jpg";
 
 const lists = [
   {
@@ -41,6 +46,27 @@ const lists2 = [
   { img: list5 },
 ];
 
+const lists3 = [
+  {
+    title: "Больничный лифт",
+    subtitle: `Больничный лифт часто используется в огромных лечебных заведениях, современных лечебных центрах, санаториях, центрах медикосанитарной помощи и т. д., где лечение больных и спасение умирающих является основной обязанностью. Серия больничных лифтов Osten придерживается гуманного подхода, применяет технологию группового наблюдения из экспертной системы, а также сокращает время ожидания пациентов до минимума.`,
+  },
+  { img: list6 },
+  { img: list7 },
+];
+
+const lists4 = [
+  {
+    title: "Грузовой лифт",
+    subtitle: `Грузовой лифт Osten использует передовую технологию синхронного безредукторного тягового усилия с постоянными магнитами, без машинного отделения. Тяговая машина имеет преимущество в малом весе, малом объеме, экономит архитектурное пространств
+    о, значительно повышает производительность и качество, снижает энергопотребление, частоту отказов.`,
+    description:
+      "Грузовой лифт Osten с меньшей высотой вала, уменьшает высоту конструкции фабрик и других зданий, может отвечать фактическим потребностям коммерческой. Самый лучший выбор для перевозки товаров на фабриках, складах, универмагах, центрах недвижимости, библиотек и т.д.",
+  },
+  { img: list8 },
+  { img: list9 },
+];
+
 const Proffesional = () => {
   return (
     <div>
@@ -49,7 +75,7 @@ const Proffesional = () => {
           <div className="universialTheme__opacity container d-flex align-items-center text-white">
             <div className="container overflow-hidden">
               <Zoom>
-                <h1>Производство</h1>
+                <h1 className="pro__title">Производство</h1>
               </Zoom>
             </div>
           </div>
@@ -67,8 +93,8 @@ const Proffesional = () => {
       <div className="container">
         <Tab.Container id="left-tabs-example" defaultActiveKey="first">
           <Row>
-            <Col sm={3}>
-              <Nav variant="pills" className="flex-column">
+            <Col className="mb-5" sm={4}>
+              <Nav className="mb-5" variant="pills" className="flex-column">
                 <Nav.Item>
                   <Nav.Link className="list__text" eventKey="first">
                     Пассажирские лифты
@@ -91,8 +117,7 @@ const Proffesional = () => {
                 </Nav.Item>
               </Nav>
             </Col>
-
-            <Col sm={9}>
+            <Col sm={8}>
               <Tab.Content>
                 <Tab.Pane eventKey="first">
                   <Connet>
@@ -124,6 +149,7 @@ const Proffesional = () => {
                     </div>
                   </Connet>
                 </Tab.Pane>
+
                 <Tab.Pane eventKey="second">
                   <Connet>
                     <div className="list__group mb-5">
@@ -139,11 +165,45 @@ const Proffesional = () => {
                     </div>
                   </Connet>
                 </Tab.Pane>
+
+                <Tab.Pane eventKey="thirth">
+                  <Connet>
+                    <div className="list__group mb-5">
+                      {lists3.map((value, index) => {
+                        return (
+                          <div>
+                            <h5 className="title fw-bold">{value.title}</h5>
+                            <p className="subtitle">{value.subtitle}</p>
+                            <img className="w-100 my-4" src={value.img} />
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </Connet>
+                </Tab.Pane>
+
+                <Tab.Pane eventKey="four">
+                  <Connet>
+                    <div className="list__group mb-5">
+                      {lists4.map((value, index) => {
+                        return (
+                          <div>
+                            <h5 className="title fw-bold">{value.title}</h5>
+                            <p className="subtitle">{value.subtitle}</p>
+                            <p className="subtitle">{value.description}</p>
+                            <img className="w-75 my-4" src={value.img} />
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </Connet>
+                </Tab.Pane>
               </Tab.Content>
             </Col>
           </Row>
         </Tab.Container>
       </div>
+      <PartSwiper />
     </div>
   );
 };
