@@ -1,0 +1,32 @@
+.news .cards {
+  overflow: hidden;
+  margin-top: 25px;
+  border-radius: 10px;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  text-align: center;
+}
+.news .cards img {
+  height: 300px;
+  object-fit: cover;
+  object-position: center center;
+}
+.news .cards .link {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+}
+.news .subtitle {
+  color: black;
+}
+.news .cards:hover .subtitle {
+  color: #febe28;
+}

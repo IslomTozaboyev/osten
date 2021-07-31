@@ -5,11 +5,11 @@ import { Route, Switch, Link } from "react-router-dom";
 import Home from "./Pages/Home";
 import Error404 from "./Pages/Error404";
 import Header from "./containers/Header";
-import УСЛУГИ from "./Pages/УСЛУГИ";
-import ПРОДУКЦИЯ from "./Pages/ПРОДУКЦИЯ";
+import Services from "./Pages/Services";
+import Product from "./Pages/Product";
 import КОНСТРУКТОР from "./Pages/КОНСТРУКТОР";
-import НОВОСТИ from "./Pages/НОВОСТИ";
-import КОНТАКТЫ from "./Pages/КОНТАКТЫ";
+import News from "./Pages/News";
+import Contact from "./Pages/Contact";
 import Footer from "./containers/Footer";
 import data from "./datafooter/datafooter";
 import About from "./Pages/About";
@@ -19,11 +19,11 @@ const routers = [
   { path: "/", component: <Home />, exact: true },
   { path: "/Oнас", component: <About /> },
   { path: "/ПРОИЗВОДСТВО", component: <Proffesional /> },
-  { path: "/УСЛУГИ", component: <УСЛУГИ /> },
-  { path: "/ПРОДУКЦИЯ", component: <ПРОДУКЦИЯ /> },
+  { path: "/УСЛУГИ", component: <Services /> },
+  { path: "/ПРОДУКЦИЯ", component: <Product /> },
   { path: "/КОНСТРУКТОР", component: <КОНСТРУКТОР /> },
-  { path: "/НОВОСТИ", component: <НОВОСТИ /> },
-  { path: "/КОНТАКТЫ", component: <КОНТАКТЫ /> },
+  { path: "/НОВОСТИ", component: <News /> },
+  { path: "/КОНТАКТЫ", component: <Contact /> },
   { component: <Error404 /> },
 ];
 

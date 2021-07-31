@@ -23,7 +23,7 @@ export default class PartSwiper extends Component {
             className="d-flex text-center my-5"
             spaceBetween={20}
             slidesPerView={1}
-            slidesPerGroup={3}
+            slidesPerGroup={1}
             loop={true}
             pagination={{ clickable: true }}
             onSwiper={(swiper) => console.log(swiper)}

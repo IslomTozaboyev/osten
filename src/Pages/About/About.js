@@ -10,25 +10,31 @@ import UniversalTheme from "../../components/UniversalTheme";
 
 const texts = [
   {
-    text: `  Современная, динамично развивающаяся, следую- щая международным
+    text: `Современная, динамично развивающаяся, следую- щая международным
     стандартам качества, при этом настроенная на максимальную
     доступность продукции для всех слоёв населения. «Osten» —
     уникальный производитель, лифтов и эскалаторов в Средней Азии.`,
-    text2: `  В настоящее время в условиях ускоренного разви- тия экономики
+
+    subtitle2: `В настоящее время в условиях ускоренного разви- тия экономики
     Республики Узбекистан и растущей динамики строительства жилых
     многоэтажных домов, торгово-развлекательных комплексов и бизнес
     центров. Возрос спрос на грузоподъемное оборудование отвечающим
     современным требо- ваниям эргономики и удобства эксплуатации.`,
-    text3: `  Принимая во внимание факторы, приведенные выше, а также в целях
+
+    subtitle3: `  Принимая во внимание факторы, приведенные выше, а также в целях
     организации производства конкурентоспособной продукции в
     Республике Узбе- кистан, предлагается освоение производства лиф-
     тов и эскалаторов.`,
-    text4: ` Цели реализации данного проекта : џ производство
+
+    subtitle: `Цели реализации данного проекта : џ производство
     конкурентоспособной продукции; џ обеспечение строительных компаний
     надёжным и качественным подъемным оборудованием; џ создание новых
     рабочих мест (200 ч.).`,
+
     img: osten1,
   },
+  { img: osten2 },
+  { img: osten3 },
 ];
 
 const texts2 = [
@@ -105,19 +111,19 @@ const About = () => {
               </div>
             </div>
           </div>
-          {texts.map((value, index) => {
-            return (
-              <div className="col-md-6">
-                <b className="title fw-bolder fs-5">{value.text}</b>
-                <p className="subtitle my-3">{value.text1}</p>
-                <p className="subtitle my-3">{value.text2}</p>
-                <p className="subtitle my-3">{value.text3}</p>
-                <img className="w-100 mt-4" src={value.img} alt="rasm" />
-                <img className="w-100 mt-4" src={osten2} alt="rasm" />
-                <img className="w-100 mt-4" src={osten3} alt="rasm" />
-              </div>
-            );
-          })}
+          <div className="col-lg-6">
+            {texts.map((value, index) => {
+              return (
+                <div>
+                  <b className="title fw-bolder fs-5">{value.text}</b>
+                  <p className="subtitle my-3">{value.subtitle}</p>
+                  <p className="subtitle my-3">{value.subtitle2}</p>
+                  <p className="subtitle my-3">{value.subtitle3}</p>
+                  <img className="w-100 mt-4" src={value.img} alt="rasm" />
+                </div>
+              );
+            })}
+          </div>
           <div className="col-md-6">
             {texts2.map((value, index) => {
               return (
