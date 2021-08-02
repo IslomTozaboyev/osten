@@ -1,0 +1,309 @@
+.lift__container .lift__style {
+  position: sticky;
+  top: 90px;
+}
+.lift__sidewall,
+.speckles {
+  z-index: 5;
+}
+.lift__mirror {
+  z-index: 4;
+  opacity: 1;
+}
+.lifts {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 75px !important;
+  height: 600px;
+}
+
+.constructor p {
+  font-size: 18px;
+}
+
+.lift__container {
+  position: relative;
+  height: 600px;
+  background-image: url("../../constructorImages/lift.png");
+  background-size: 100% 100%;
+}
+
+.lift {
+  position: static;
+  top: 70px;
+}
+
+.colors {
+  width: 100px;
+  height: 100px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.colors:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.bac1 {
+  position: absolute;
+  top: 19.8%;
+  right: 6%;
+  width: 49%;
+  height: 60.9%;
+  transform: perspective(100px) rotateY(-5.5deg);
+}
+
+.bac2 {
+  position: absolute;
+  top: 20.1%;
+  left: 4.8%;
+  width: 43.5%;
+  height: 60%;
+  transform: perspective(100px) rotateY(5.3deg);
+}
+
+.bg1 {
+  background-image: url("../../constructorImages/bac1.jpg");
+  background-size: cover;
+}
+
+.bg2 {
+  background-image: url("../../constructorImages/bac2.jpg");
+  background-size: cover;
+}
+
+.bg3 {
+  background-image: url("../../constructorImages/bac3.jpg");
+  background-size: cover;
+}
+
+.bac3 {
+  position: absolute;
+  top: 17%;
+  left: 1%;
+  width: 50%;
+  height: 58%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: perspective(2100px) rotateY(2deg);
+  display: block !important;
+}
+
+.mirror1 {
+  background-image: url("../../constructorImages/icon-mirror-full.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mirror2 {
+  background-image: url("../../constructorImages/icon-mirror-half.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mirror3 {
+  background-image: url("../../constructorImages/icon-mirror-half-small.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.close {
+  background-image: url("../../constructorImages/icon-mirror-none.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mirrorimg1 {
+  background-image: url("../../constructorImages/mirror-ful.png");
+}
+
+.mirrorimg2 {
+  background-image: url("../../constructorImages/mirror-half.png");
+}
+
+.mirrorimg3 {
+  background-image: url("../../constructorImages/mirror-half-small.png");
+}
+
+.handerlis1 {
+  background-image: url("../../constructorImages/handrails1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.handerlis2 {
+  background-image: url("../../constructorImages/handrails1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.handerlist1 {
+  position: absolute;
+  top: 17%;
+  left: 5%;
+  width: 80%;
+  height: 58%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: perspective(2100px) rotateY(2deg);
+  display: block !important;
+}
+
+.handerlist2 {
+  position: absolute;
+  top: 17%;
+  right: 5%;
+  width: 80%;
+  height: 58%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: perspective(2100px) rotateY(2deg);
+  display: block !important;
+}
+
+.handerlist1 img {
+  width: 200px;
+}
+
+.lifttop {
+  position: absolute;
+  top: -32.1%;
+  left: 4%;
+  width: 90.7%;
+  height: 93%;
+  clip-path: polygon(0 67%, 54.5% 0, 101% 61%, 47% 96%);
+  transform: perspective(4000px) rotateX(80.5deg);
+  background-position: center bottom;
+}
+
+.liftbottom {
+  position: absolute;
+  bottom: -32.1%;
+  left: 0%;
+  width: 97%;
+  height: 93%;
+  clip-path: polygon(0 35%, 48% -0%, 100% 45%, 55.5% 100%);
+  transform: perspective(4000px) rotateX(80.2deg);
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.lifticon {
+  background-image: url("../../constructorImages/liftbottom.jpg");
+}
+
+.imagestop {
+  width: 123px;
+  height: 100px;
+  transition: 0.5s;
+  margin-left: 20px;
+}
+
+.imagestop:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.topimg1 {
+  background-color: black;
+  background-size: 100% 100%;
+}
+
+.topimg2 {
+  background-color: blue;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.topimg3 {
+  background-color: red;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1400px) {
+  .bac1 {
+    top: 20%;
+    width: 50%;
+    height: 60%;
+    transform: perspective(100px) rotateY(-6deg);
+  }
+  .bac2 {
+    top: 20.5%;
+    height: 59.3%;
+    transform: perspective(100px) rotateY(6deg);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .lift__container {
+    max-height: 500px !important;
+  }
+  .bac1 {
+    top: 19.6%;
+    width: 49%;
+    height: 60.5%;
+    transform: perspective(100px) rotateY(-6deg);
+  }
+  .bac2 {
+    top: 19.9%;
+    height: 60%;
+    transform: perspective(100px) rotateY(7deg);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .lifts {
+    position: unset !important;
+  }
+  .lift__container {
+    max-height: 600px !important;
+    margin-bottom: 30px;
+  }
+  .bac1 {
+    top: 19.6%;
+    width: 50%;
+    height: 60.5%;
+    transform: perspective(100px) rotateY(-3.9deg);
+  }
+  .bac2 {
+    top: 19.9%;
+    left: 4.5%;
+    width: 43%;
+    height: 60%;
+    transform: perspective(100px) rotateY(4deg);
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .lift__container {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .bac1 {
+    top: 19.5%;
+    right: 6% !important;
+    width: 49.3%;
+    height: 61%;
+    transform: perspective(100px) rotateY(-6deg);
+  }
+  .bac2 {
+    top: 19.9%;
+    left: 4.5%;
+    width: 43%;
+    height: 60.3%;
+    transform: perspective(100px) rotateY(6deg);
+  }
+  .colors {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+  }
+}
